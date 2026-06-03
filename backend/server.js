@@ -44,7 +44,14 @@ const authMiddleware = async (req, res, next) => {
     res.status(401).json({ message: 'Token is not valid' });
   }
 };
-
+// Add this test route
+app.get('/', (req, res) => {
+  res.json({ message: 'Backend is running! API is at /api' });
+});
+// Test API route
+app.get('/api/test', (req, res) => {
+  res.json({ message: 'API is working' });
+});
 // ========== API ROUTES ==========
 
 // REGISTER - CREATE student
