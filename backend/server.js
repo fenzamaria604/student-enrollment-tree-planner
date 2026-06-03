@@ -44,14 +44,16 @@ const authMiddleware = async (req, res, next) => {
     res.status(401).json({ message: 'Token is not valid' });
   }
 };
-// Add this test route
+
+// ========== TEST ROUTES (Put these FIRST) ==========
 app.get('/', (req, res) => {
   res.json({ message: 'Backend is running! API is at /api' });
 });
-// Test API route
+
 app.get('/api/test', (req, res) => {
-  res.json({ message: 'API is working' });
+  res.json({ message: 'API is working!' });
 });
+
 // ========== API ROUTES ==========
 
 // REGISTER - CREATE student
@@ -118,7 +120,7 @@ app.post('/api/login', async (req, res) => {
   }
 });
 
-// GET all students - READ (Admin view)
+// GET all students - READ
 app.get('/api/students', authMiddleware, async (req, res) => {
   try {
     const students = await Student.find().select('-password');
