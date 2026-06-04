@@ -5,7 +5,6 @@
 }
 
 body {
-<<<<<<< HEAD
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   background: #f0fdf4;
   min-height: 100vh;
@@ -18,26 +17,11 @@ body {
   padding: 24px;
 }
 
-/* Header Styles */
-=======
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #1e3c2c 0%, #2a5a3a 100%);
-  min-height: 100vh;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
->>>>>>> f7859f04762c55936115883b8d4be06eedf41722
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: white;
-<<<<<<< HEAD
   padding: 16px 24px;
   border-radius: 16px;
   margin-bottom: 24px;
@@ -60,7 +44,6 @@ body {
   cursor: pointer;
   font-weight: 500;
   font-size: 14px;
-  transition: all 0.2s;
   width: auto;
   margin: 0;
 }
@@ -69,7 +52,6 @@ body {
   background: #bbf7d0;
 }
 
-/* Card Styles */
 .card {
   background: white;
   padding: 32px;
@@ -96,7 +78,6 @@ body {
   font-weight: 600;
 }
 
-/* Input Styles */
 input, select {
   width: 100%;
   padding: 12px 16px;
@@ -104,14 +85,12 @@ input, select {
   border: 1px solid #bbf7d0;
   border-radius: 12px;
   font-size: 15px;
-  transition: all 0.2s;
   background: #ffffff;
   color: #14532d;
 }
 
 input::placeholder {
   color: #86efac;
-  font-weight: 400;
 }
 
 input:focus, select:focus {
@@ -120,7 +99,6 @@ input:focus, select:focus {
   box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
 }
 
-/* Button Styles */
 button {
   width: 100%;
   padding: 12px;
@@ -131,7 +109,6 @@ button {
   cursor: pointer;
   font-size: 15px;
   font-weight: 600;
-  transition: all 0.2s;
   margin-top: 8px;
 }
 
@@ -142,11 +119,9 @@ button:hover {
 .link-btn {
   background: transparent;
   color: #15803d;
-  text-decoration: none;
   width: auto;
   padding: 0;
   margin-left: 4px;
-  font-weight: 500;
 }
 
 .link-btn:hover {
@@ -154,7 +129,6 @@ button:hover {
   text-decoration: underline;
 }
 
-/* Tree Container - FIXED VISIBILITY */
 .tree-container {
   text-align: center;
   padding: 32px;
@@ -183,7 +157,6 @@ button:hover {
   margin-bottom: 16px;
 }
 
-/* Progress Bar */
 .progress-bar {
   width: 100%;
   height: 10px;
@@ -200,14 +173,12 @@ button:hover {
   transition: width 0.3s ease;
 }
 
-/* Profile Card */
 .profile-card {
   background: white;
   padding: 24px;
   border-radius: 20px;
   margin-top: 20px;
   border: 1px solid #dcfce7;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
 }
 
 .profile-card h3 {
@@ -231,16 +202,13 @@ button:hover {
   color: #15803d;
 }
 
-/* Edit Button */
 .edit-btn {
   background: #dcfce7;
   color: #15803d;
-  border: none;
   padding: 6px 16px;
   width: auto;
   margin: 0;
   font-size: 13px;
-  font-weight: 500;
   border-radius: 8px;
 }
 
@@ -258,7 +226,18 @@ button:hover {
   background: #e2e8f0;
 }
 
-/* Message */
+.delete-btn {
+  background: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  margin-top: 20px;
+}
+
+.delete-btn:hover {
+  background: #fecaca;
+  color: #b91c1c;
+}
+
 .message {
   margin-top: 16px;
   padding: 12px;
@@ -281,7 +260,6 @@ button:hover {
   font-weight: 500;
 }
 
-/* Celebration */
 .celebration {
   margin-top: 16px;
   padding: 16px;
@@ -290,7 +268,6 @@ button:hover {
   color: #92400e;
   font-weight: 600;
   text-align: center;
-  font-size: 14px;
 }
 
 .update-message {
@@ -301,17 +278,63 @@ button:hover {
   color: #15803d;
   font-weight: 500;
   text-align: center;
-  font-size: 14px;
 }
 
-/* Flex Helpers */
 .flex-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Responsive */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 24px;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.modal h3 {
+  color: #dc2626;
+  margin-bottom: 12px;
+}
+
+.modal p {
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.confirm-delete-btn {
+  background: #dc2626;
+  color: white;
+  flex: 1;
+}
+
+.cancel-delete-btn {
+  background: #e5e7eb;
+  color: #374151;
+  flex: 1;
+}
+
 @media (max-width: 640px) {
   .container {
     padding: 16px;
@@ -335,249 +358,4 @@ button:hover {
     margin: 30px 16px;
     padding: 24px;
   }
-  
-  .profile-card p {
-    font-size: 13px;
-  }
-}
-/* Delete Button */
-.delete-btn {
-  background: #fee2e2;
-  color: #dc2626;
-  border: 1px solid #fecaca;
-  margin-top: 20px;
-}
-
-.delete-btn:hover {
-  background: #fecaca;
-  color: #b91c1c;
-}
-
-/* Modal Styles */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.modal {
-  background: white;
-  padding: 24px;
-  border-radius: 20px;
-  max-width: 400px;
-  width: 90%;
-  text-align: center;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-.modal h3 {
-  color: #dc2626;
-  margin-bottom: 12px;
-  font-size: 1.3rem;
-}
-
-.modal p {
-  color: #4b5563;
-  margin-bottom: 20px;
-}
-
-.modal-buttons {
-  display: flex;
-  gap: 12px;
-}
-
-.confirm-delete-btn {
-  background: #dc2626;
-  color: white;
-  flex: 1;
-}
-
-.confirm-delete-btn:hover {
-  background: #b91c1c;
-}
-
-.cancel-delete-btn {
-  background: #e5e7eb;
-  color: #374151;
-  flex: 1;
-}
-
-.cancel-delete-btn:hover {
-  background: #d1d5db;
-=======
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.header h1 {
-  color: #2e7d32;
-}
-
-.logout-btn {
-  background: #dc3545;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.logout-btn:hover {
-  background: #c82333;
-}
-
-.card {
-  background: white;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  max-width: 500px;
-  margin: 50px auto;
-}
-
-.card h1 {
-  color: #2e7d32;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.card h2 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-form input {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-form button {
-  width: 100%;
-  padding: 12px;
-  background: #2e7d32;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-form button:hover {
-  background: #1b5e20;
-}
-
-.link-btn {
-  background: none;
-  border: none;
-  color: #2e7d32;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.message {
-  margin-top: 15px;
-  padding: 10px;
-  background: #e8f5e9;
-  color: #2e7d32;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.tree-card {
-  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-  padding: 25px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.tree-card h2 {
-  color: #1b5e20;
-  margin-bottom: 15px;
-}
-
-.tree-stats {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-bottom: 15px;
-}
-
-.tree-stats p {
-  font-size: 18px;
-}
-
-.tree-stats strong {
-  color: #2e7d32;
-  font-size: 24px;
-}
-
-.tree-message {
-  background: #fff3e0;
-  padding: 15px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  color: #e65100;
-}
-
-.students-section {
-  background: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.students-section h2 {
-  color: #333;
-  margin-bottom: 20px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-th {
-  background: #2e7d32;
-  color: white;
-}
-
-tr:hover {
-  background: #f5f5f5;
-}
-
-.delete-btn {
-  background: #dc3545;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.delete-btn:hover {
-  background: #c82333;
->>>>>>> f7859f04762c55936115883b8d4be06eedf41722
 }
