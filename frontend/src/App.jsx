@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 
-const API = 'http://localhost:5000/api';
+const API = 'https://student-enrollment-tree-planner-1.onrender.com/api';
 
 function App() {
   const [isLogin, setIsLogin] = useState(true);
