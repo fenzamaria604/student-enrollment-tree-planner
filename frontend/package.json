@@ -10,9 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "axios": "^1.17.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
+=======
+    "axios": "^1.16.1",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-router-dom": "^7.16.0"
+>>>>>>> f7859f04762c55936115883b8d4be06eedf41722
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
